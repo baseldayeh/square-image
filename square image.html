@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basel-dayeh</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #moving-box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            position: absolute;
+            animation: moveBox 10s linear infinite;
+        }
+
+        @keyframes moveBox {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: calc(100% - 100px);
+            }
+            50% {
+                top: calc(100% - 100px);
+                left: calc(100% - 100px);
+            }
+            75% {
+                top: calc(100% - 100px);
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="moving-box"></div>
+</body>
+</html>
